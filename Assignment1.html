@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment1</title>
+    <Script>
+
+        //Reverse String Function Starts
+        function reverseString(str)
+        {
+            if(str==="") return str;
+            return reverseString(str.substr(1))+str.charAt(0);
+        }
+        console.log(reverseString("Lokesh"));
+        //Reverse String Function Ends
+
+        // Function to print prime numbers between 1 to 100 starts
+        function primeNumbers()
+        {
+            var str="";
+            for(i=1;i<=100;i++)
+            {
+                for(j=2;j<i;j++)
+                {
+                    if(i%j==0) break;
+                  
+                }
+                if(j==i) str=str+i+" ";
+                
+            }
+            console.log(str);
+        }
+        primeNumbers();
+         // Function to print prime numbers between 1 to 100 ends
+         
+         // Armstrong Number starts
+
+            function ArmstrongNumber(num)
+            {
+                var count=0;
+                n=num;
+                var num1=num;
+                if(n>=1) count=1;
+                while(n/10>=1)
+                {
+                    n=n/10;
+                    ++count;
+                }
+                var sum=0;
+                n=0;
+           
+                
+                while(num>1)
+                {
+                    n=parseInt(num%10);
+                    sum=sum+Math.pow(n,count);
+                    num=num/10;
+                }
+                
+                if(sum==num1) console.log(`${num1} is armstrong number`);
+                else console.log(`${num1} is not armstrong number`);
+                
+            }
+            ArmstrongNumber(1674);
+
+         // Armstrong Number ends
+
+         // program to display the numbers in alert box starts
+         function alertNumber()
+         {
+            var a=prompt("Enter a first number : ");
+            var b=prompt("Enter a second number : ");
+            var sum=parseInt(a)+parseInt(b);
+            alert(`Sum of ${a} and ${b} is ${sum}`);
+         }
+        alertNumber();
+         // program to display the numbers in alert box ends
+
+         //Write a Javascript  program to test if the email entered by the user is valid. Starts
+        function ValidateMail(email){
+            const regex_pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+            if (regex_pattern.test(email)) {
+                console.log('The email address is valid');
+            }
+            else {
+                console.log('The email address is not valid');
+            }
+        }
+
+        ValidateMail("lokeshprajapat@gmail.com")
+        //Write a Javascript  program to test if the email entered by the user is valid. Ends
+
+         //Write a Javascript program to display the current date and time. starts
+
+         const date = new Date();
+        console.log(date);
+        //Write a Javascript program to display the current date and time. Ends
+
+    </Script>
+</head>
+<body>
+    <h1>Lokesh Prajapati</h1>
+</body>
+</html>
